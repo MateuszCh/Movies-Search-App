@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Movies Search App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div class="wrapper gradientBackground">
+            <h1 id="mainHeader">Movies Search App</h1>
+            <div>
+                <div class="kadr">
+                    <img src="images/logo1.svg" alt="logo">
+                </div>
+                <div class="app">
+                    <div class="searchBox">
+                        <form class="show">
+                            <input type="text" placeholder="Find movies, Tv shows" id="searchText">
+                            <button id="searchButton"><img src="images/search.png" alt="search icon"></button>
+                        </form>
+                    </div>
+                    <div class="infoBox">
+                        <figure class="poster" id="poster">
+                        </figure>
+                        <div class="info">
+                            <div class="titleAndYear">
+                                <p class="title" id="title"></p>
+                                <p class="duration" id="duration"></p>
+                            </div>
+                            <div class="rating">
+                                <div class="stars" id="stars">
+                                </div>
+                                <p class="votes" id="votes"></p>
+                            </div>
+                            <div class="details">
+                                <div class="directorDiv">
+                                    <p>Directed by:</p>
+                                    <p class="director" id="director"></p>
+                                </div>
+                                <div class="genreDiv">
+                                    <p>Genre:</p>
+                                    <p class="genre" id="genre"></p>
+                                </div>
+                                <div class="releasedDiv">
+                                    <p>Release date:</p>
+                                    <p class="premiere" id="premiere"></p>
+                                </div>
+                            </div>
+                            <p class="plot" id="plot"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="searchResult" id="searchResult">
+            <span class="closeSearchResult" id="closeSearchResult">x</span>
+            <h2 class="resultsFor" id="resultsFor">Results for</h2>
+            <ul class="resultsList" id="resultsList"></ul>
+            <div class="prevAndNext">
+                <button class="previous" id="previous">Previous</button>
+                <span id="numberOfPage">page</span>
+                <button class="next" id="next">Next</button>
+            </div>
+        </div>
+        <div class="loadingResults" id="loadingResults"></div>
+        <script src="minjs/jquery-3.1.1.min.js"></script>
+        <script src="minjs/main.js"></script>
+    </body>
+</html>

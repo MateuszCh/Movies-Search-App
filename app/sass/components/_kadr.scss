@@ -1,0 +1,9 @@
+.kadr {
+  display: none;
+  &.show  {
+    @include medium {
+      display: block;
+      width: 10%;
+    }
+  }
+}

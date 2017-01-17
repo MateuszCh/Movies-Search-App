@@ -1,0 +1,37 @@
+.loadingResults {
+  background: #fff;
+  animation: float 1s infinite ease;
+  width: 1em;
+  height: 4em;
+  color: #fff;
+  margin: 5rem auto;
+  position: fixed;
+  top: calc(50% - 7rem);
+  left: calc(50% - .5em);
+  font-size: .625rem;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+  z-index: 10;
+  display: none;
+  &.dark  {
+    color: #555;
+    background: #555;
+  }
+  &:before,
+  &:after {
+    background: inherit;
+    animation: float 1s infinite ease;
+    width: 1em;
+    height: 4em;
+    position: absolute;
+    top: 0;
+    content: '';
+  }
+  &:before  {
+    left: -1.5em;
+    animation-delay: -0.32s;
+  }
+  &:after {
+    left: 1.5em;
+  }
+}

@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: $text-font;
+  font-weight: 300;
+}
+.wrapper  {
+  @include large  {
+    width: 65%;
+    margin: 0 auto;
+  }
+  &.gradientBackground  {
+    background: linear-gradient(to top, rgba($color-green, .8) 0%, rgba($color-pink, .8s) 100%);
+    height: 100vh;
+  }
+  &.backgroundPhoto  {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .7) 30%, rgba(255,255,255, .8) 50%, rgba(255, 255, 255, 1) 70%), url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include medium {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .7) 30%, rgba(255,255,255, .8) 50%, rgba(255, 255, 255, 1) 70%),
+      linear-gradient(to left, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 90%),
+      url("../images/background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  h1  {
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    margin-bottom: 5rem;
+    color: #eee;
+  }
+  &>div   {
+    padding: .5rem;
+    @include medium {
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+

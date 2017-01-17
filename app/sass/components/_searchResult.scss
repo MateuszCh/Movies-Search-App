@@ -1,0 +1,127 @@
+.searchResult {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: none;
+  .closeSearchResult  {
+    position: absolute;
+    padding: .3rem;
+    right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    @include medium {
+      padding-right: 22%;
+    }
+    @include large  {
+      padding-right: 36%;
+    }
+    &:hover {
+      color: $color-pink;
+    }
+  }
+  .resultsFor {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .numberOfResults  {
+    text-align: center;
+  }
+  .resultsList  {
+    width: 100%;
+    padding: 1rem;
+    list-style-type: none;
+    @include medium  {
+      width: 60%;
+      margin: 0 auto;
+    }
+    @include large  {
+      width: 30%;
+    }
+    li  {
+      margin: .3rem 0;
+      background-color: #ddd;
+      cursor: pointer;
+      display: flex;
+      transition: all .2s ease-in-out;
+      min-height: 4.6rem;
+      align-items: center;
+      &:hover {
+        background-color: #fff;
+      }
+      figure  {
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        img   {
+          max-height: 4rem;
+          max-width: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      div {
+        width: 20%;
+        padding: 0;
+        margin: 0;
+        .noPhotoSmall {
+          width: 45px;
+          margin: 0 auto;
+          background-color: white;
+          height: 4rem;
+          font-size: .8rem;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          border: 1px solid #888;
+        }
+      }
+      .resultsListTitleAndYear  {
+        width: 80%;
+        padding: 0 .3rem;
+        display: flex;
+        flex-direction: column;
+        span:nth-child(1) {
+          font-size: 1rem;
+        }
+        span:nth-child(2) {
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+  .notFound {
+    text-align: center;
+  }
+  .prevAndNext  {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: .4rem;
+    button  {
+      background-color: transparent;
+      cursor: pointer;
+
+    }
+    @include medium {
+      width: 60%;
+      margin: 0 auto;
+    }
+    @include large  {
+      width: 30%;
+    }
+    .hideButton {
+      color: transparent;
+      cursor: inherit;
+      &::selection  {
+        color: transparent;
+      }
+    }
+  }
+}
